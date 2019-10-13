@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <title>MyPictionary | The game you won't drop!</title>
+    <link rel = "icon" type = "image/png" href = "../images/logo.png">
+    <link rel="stylesheet" href="../css/styleForHomeAndForms.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="navbar-header">
+                <a href="home.html" id="homeLink">
+                    <p class="navbar-brand" id="title">MyPictionary</p>
+                    <img src="../images/logo.png" alt="logo" id="mainLogo" class="navbar-text navbar-left">
+                </a>
+            </div>
+            
+            <button onclick="location.href='login.html'" type="button" class="btn btn-default navbar-btn navbar-right" id="loginButton">Login</button>
+            <p class="navbar-text navbar-right"><a href="register.html" class="navbar-link" id="regBtn">Register</a></p>
+            <p class="navbar-text navbar-right"><a href="theGame.html" class="navbar-link" id="theGameBtn">The Game</a></p>
+        </nav>
+    </div>
+
+
+    
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="text-center">Get started <em><strong>now</strong></em>!</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-offset-2 col-sm-8 col-lg-offset-4 col-lg-4" id="loginForm">
+                    <form class="form-horizontal">
+                            <fieldset>
+                            
+                            <!-- Form Name -->
+                            <legend class="text-center">Register</legend>
+                            <br>
+                            
+                            <!-- Username -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="username">Username:</label>  
+                                <div class="col-md-4">
+                                    <input id="username" name="username" type="text" placeholder="PictoL33t" class="form-control input-md" required="">
+                                      
+                                </div>
+                            </div>
+                            
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                              <label class="col-md-4 control-label" for="email">Email address:</label>  
+                              <div class="col-md-4">
+                              <input id="email" name="email" type="text" placeholder="example@host.com" class="form-control input-md" required="">
+                                
+                              </div>
+                            </div>
+                            
+                            
+                            <!-- Password input-->
+                            <div class="form-group">
+                              <label class="col-md-4 control-label" for="password">Password:</label>
+                              <div class="col-md-4">
+                                <input id="password" name="password" type="password" placeholder="" class="form-control input-md" required="">
+                                
+                              </div>
+                            </div>
+                            
+
+                            <!-- Password input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="passwordConfirm">Confirm password:</label>
+                                <div class="col-md-4">
+                                  <input id="passwordConfirm" name="passwordConfirm" type="password" placeholder="" class="form-control input-md" required="">
+                                  
+                                </div>
+                            </div>
+ 
+                            
+                            <br>
+
+                            <a href="#" class="btn btn-lg btn-primary center" id="submitLogin"><span class="glyphicon glyphicon-user"></span> Create account</a>
+                            <br>
+                            <br>
+                            <a href="login.html" class="text-center">Already have an account? Log in here!</a>
+                            </fieldset>
+                            </form>
+            </div>
+        </div>  
+    </div>
+
+    <div class="container">
+        <footer>
+        </footer>
+    </div>
+</body>
+</html>

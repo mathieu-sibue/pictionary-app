@@ -1,0 +1,4 @@
+{"_id":{"$oid":"5d6d927f862abf2768d4771a"},"word":"Cow","description":"It goes 'Moo Moo'","author":"MathAdmin","createdAt":{"$date":"2019-09-02T22:06:55.999Z"},"__v":0}
+{"_id":{"$oid":"5d6d9285862abf2768d4771b"},"word":"House","description":"You basically live in it.","author":"MathAdmin","createdAt":{"$date":"2019-09-02T22:07:01.621Z"},"__v":0}
+{"_id":{"$oid":"5d7105c7d886d32954cb0945"},"word":"voiture","description":"vroom","author":"MathAdmin","createdAt":{"$date":"2019-09-05T12:55:35.135Z"},"__v":0}
+{"_id":{"$oid":"5d9e14058d88273acc386079"},"word":"lit","description":"on y dort","author":"admin","createdAt":{"$date":"2019-10-09T17:08:21.935Z"},"__v":0}

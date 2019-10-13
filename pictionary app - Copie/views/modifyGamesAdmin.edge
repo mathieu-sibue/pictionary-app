@@ -1,0 +1,36 @@
+@layout('layouts.appConnectedAdmin')
+
+@section('content')
+    <div class="container-fluid hero-image">
+        <div class="row">
+            <h1 class="text-center">Modify the games history to your liking!</h1>
+        </div>
+
+        <!--ajouter section avec un form pr rajouter un mot (le bouton "+" sera un post qui redirigera vers la mm page)-->
+
+        @each(game in games.reverse())
+            <div class="row">
+                <div class="col-sm-offset-2 col-sm-8 col-lg-offset-4 col-lg-4 gameBox">
+                    <h2 class="text-center infoGame"><strong>{{game.lobbyName}}</strong></h2>
+                    <ul class="listGame">
+                        <li><span class="glyphicon glyphicon-globe"></span><strong>  Player Count: </strong>{{(game.participants).length}}/{{game.maxNbParticipants}}</li>
+                        <li><span class="glyphicon glyphicon-globe"></span><strong>  Participants: </strong>{{game.participants.join(', ')}}</li>
+                        <li><span class="glyphicon glyphicon-screenshot"></span><strong>  Current Round: </strong>{{game.wordsUsed.length}}/{{game.roundNb}}</li>
+                        <li><span class="glyphicon glyphicon-user"></span><strong>  Created by: </strong>{{game.creator}}</li>
+                        <li><span class="glyphicon glyphicon-time"></span><strong>  Created on: </strong>{{(game.createdAt).toDateString()+" at "+(game.createdAt).toTimeString().substring(0,8)}}</li>
+                    </ul>
+                    <br>
+                    @if(game.finished === true)
+                        <div class="text-center"><a href="#" class="btn btn-lg btn-danger infoGame" id="joinGameBtn"><span class="glyphicon glyphicon-remove"></span> Delete</a></div>
+                        <br>
+                    @endif
+                    <!--on ne peut détruire que les jeux finis-->
+                        
+                    
+                </div>
+            </div>
+            <br>
+            
+        @endeach
+    </div>
+@endsection

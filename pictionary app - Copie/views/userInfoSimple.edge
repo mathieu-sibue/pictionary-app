@@ -1,0 +1,27 @@
+@layout('layouts.appConnectedSimple')
+
+@section('content')
+<div class="hero-image">
+        <div class="container-fluid">
+            <div class="row">
+                <h1 class="text-center">Modify your Account</h1>
+            </div>
+            <br>
+    
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-10 col-lg-offset-2 col-lg-8">
+                    <div class="row">
+                        <div class="col-sm-4 col-sm-offset-1">
+                            <a href="/myAccount/history"><button class="btn btn-block btn-lg btn-primary center modif"><span class="glyphicon glyphicon-book"></span> View history</button></a>
+                        </div>
+                        <div class="col-sm-4 col-sm-offset-2">
+                            <a href="/myAccount/modify"><button class="btn btn-block btn-lg btn-primary center modif"><span class="glyphicon glyphicon-user"></span> Account parameters</button></a>
+                        </div>
+                    </div>
+                </div>
+                        
+            </div> 
+        </div>
+      </div>
+    @endsection
+@endsection

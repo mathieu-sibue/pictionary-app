@@ -1,0 +1,43 @@
+@layout('layouts.appConnectedSimple')
+
+@section('content')
+
+
+    <div class="container-fluid hero-image">
+        <div class="row">
+            <h1 class="text-center">Join ongoing games with places left!</h1>
+        </div>
+
+        <div class="boxes"></div>
+
+        <script>
+            var user = "{{userLogged.username}}";
+            console.log(user);
+
+        </script>
+
+    </div>
+
+      <!-- Charge React -->
+      <!-- Remarque : pour le déploiement, remplacez "development.js"
+       par "production.min.js" -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script type="text/jsx">
+            console.log(games);
+            const domContainer = document.querySelector('.boxes');
+            if(games === []) {
+                const element = (<div class="row"><h5 class="text-center">Unfortunately no game available... Refresh in a few minutes or <a href="/games/new">create your own Game!</a> </h5></div>);                
+                ReactDOM.render(element, domContainer);
+            } else {
+                for (let game of games.reverse()) {
+                    console.log(game);
+                    var element = (<div class="row"><h5 class="text-center">Unfortunately no game available... Refresh in a few minutes or <a href="/games/new">create your own Game!</a> </h5></div>);                
+                    ReactDOM.render(element, domContainer);
+                };
+            };
+
+            
+    </script>
+@endsection
+        

@@ -1,0 +1,61 @@
+@layout('layouts.appConnectedSimple')
+
+@section('content')
+        <div class="container-fluid hero-image">
+        <div class="row">
+            <h1 class="text-center">Create new game!</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-offset-2 col-sm-8 col-lg-offset-4 col-lg-4" id="loginForm">
+                <form class="form-horizontal" action="/games/store" method="POST">
+                    <fieldset>
+                            
+                        <!-- Form Name -->
+                        <legend class="text-center">New game properties</legend>
+                        <br>
+                                
+                        <!-- lobby name -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="lobbyName">Lobby Name:</label>  
+                            <div class="col-md-4">
+                                <input id="lobbyName" name="lobbyName" type="text" placeholder="MyAwesomeLobby" class="form-control input-md" required="">
+                                          
+                             </div>
+                        </div>
+                                
+
+                        <!-- round number-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="roundNumber">Round number:</label>  
+                            <div class="col-md-4">
+                                <input id="roundNumber" name="roundNb" type="number" value="3" min="1" max="10" step="1" class="form-control input-md" required="">
+                                    
+                            </div>
+                        </div>
+                                
+                                
+                        <!-- maxParticipants-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="roundNumber">Max number of players:</label>  
+                            <div class="col-md-4">
+                                <input id="maxParticipants" name="maxNbParticipants" type="number" value="5" min="2" max="10" step="1" class="form-control input-md" required="">
+                                    
+                            </div>
+                        </div>
+                                    
+                        <br>        
+    
+                        <button class="btn btn-lg btn-primary center" id="createGameBtn"><span class="glyphicon glyphicon-plus"></span> Create Game</button>
+                        <br>
+                        <br>
+                        <p class="text-center">Don't want to go through all this? Join an ongoing game!</p>
+                        <a href="/games/join" class="btn btn-md btn-success center" id="joinGameBtn"><span class="glyphicon glyphicon-circle-arrow-right"></span> Join Game</a>
+
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+@endsection

@@ -1,0 +1,69 @@
+@layout('layouts.appNoConnection')
+
+@section('content')
+    <div class="container-fluid hero-image">
+        <div class="row">
+            <h1 class="text-center">Get started <em><strong>now</strong></em>!</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-offset-2 col-sm-8 col-lg-offset-4 col-lg-4" id="loginForm">
+                    <form class="form-horizontal" action="/users/store" method="POST">
+                            <fieldset>
+                            
+                            <!-- Form Name -->
+                            <legend class="text-center">Register</legend>
+                            <br>
+                            
+                            <!-- Username -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="username">Username:</label>  
+                                <div class="col-md-4">
+                                    <input id="username" name="username" type="text" placeholder="PictoL33t" class="form-control input-md" required="">
+                                      
+                                </div>
+                            </div>
+                            
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                              <label class="col-md-4 control-label" for="email">Email address:</label>  
+                              <div class="col-md-4">
+                              <input id="email" name="email" type="text" placeholder="example@host.com" class="form-control input-md" required="">
+                                
+                              </div>
+                            </div>
+                            
+                            
+                            <!-- Password input-->
+                            <div class="form-group">
+                              <label class="col-md-4 control-label" for="password">Password:</label>
+                              <div class="col-md-4">
+                                <input id="password" name="password" type="password" placeholder="" class="form-control input-md" required="">
+                                
+                              </div>
+                            </div>
+                            
+
+                            <!-- Password input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="passwordConfirm">Confirm password:</label>
+                                <div class="col-md-4">
+                                  <input id="passwordConfirm" name="passwordConfirm" type="password" placeholder="" class="form-control input-md" required="">
+                                  
+                                </div>
+                            </div>
+ 
+                            
+                            <br>
+
+                            <button class="btn btn-lg btn-primary center" id="submitNewAccount"><span class="glyphicon glyphicon-user"></span> Create account</button>
+                            <br>
+                            <br>
+                            <a href="login" class="text-center">Already have an account? Log in here!</a>
+                            </fieldset>
+                            </form>
+            </div>
+        </div>  
+    </div>
+@endsection

@@ -1,0 +1,30 @@
+{
+  "name": "pictionary-app",
+  "version": "1.0.0",
+  "description": "pictionary app for first DTY Project",
+  "main": "app.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.3.1",
+    "connect-mongo": "^3.0.0",
+    "edge": "^7.10.1",
+    "express": "^4.17.1",
+    "express-edge": "^1.0.0",
+    "express-session": "^1.16.2",
+    "mongoose": "^5.6.11",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pictionary",
+    "game",
+    "training",
+    "project"
+  ],
+  "author": "Mathieu Sibué",
+  "license": "ISC"
+}

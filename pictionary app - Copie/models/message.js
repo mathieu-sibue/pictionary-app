@@ -1,0 +1,1 @@
+//pour stocker les tentatives des joueurs d'une partie pour deviner l'objet dessiné par le créateur de la partie

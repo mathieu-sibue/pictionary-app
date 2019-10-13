@@ -1,0 +1,57 @@
+@layout('layouts.appNoConnection')
+
+@section('content')
+  <div class="hero-image">
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="text-center">Get Ready!</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-offset-2 col-sm-8 col-lg-offset-4 col-lg-4" id="loginForm">
+                    <form class="form-horizontal" method="POST" action="/users/login">
+                        <fieldset>
+                            
+                            <!-- Form Name -->
+                            <legend class="text-center">Login</legend>
+                            <br>
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                              <label class="col-md-4 control-label" for="email">Email:</label>  
+                              <div class="col-md-4">
+                              <input id="email" name="email" type="text" placeholder="example@host.com" class="form-control input-md" required="">
+                                
+                              </div>
+                            </div>
+                            <br>
+                            
+                            <!-- Password input-->
+                            <div class="form-group">
+                              <label class="col-md-4 control-label" for="password">Password:</label>
+                              <div class="col-md-4">
+                                <input id="password" name="password" type="password" placeholder="" class="form-control input-md" required="">
+                                
+                              </div>
+                            </div>
+
+                            <!--AJOUTER REMEMBER-ME A COCHER AVANT LE LOGIN ET LIEN : NO ACCOUNT YET? REGISTER NOW! APRES LE LOGIN-->
+                            
+                                
+                            <div class="checkbox">
+                              <label for="rememberMe" class="checkbox"><input id="rememberMe" name="rememberMe" type="checkbox"> Remember me?</label>
+                            </div>
+                            
+                            <br>
+
+                            <button class="btn btn-lg btn-primary center" id="submitLogin"><span class="glyphicon glyphicon-log-in"></span> Log in</button>
+                            <br>
+                            <br>
+                            <a href="register" class="text-center">No account yet? Register now!</a>
+                         </fieldset>
+                    </form>
+            </div>
+        </div> 
+    </div>
+  </div>
+@endsection

@@ -1,0 +1,63 @@
+@layout('layouts.appConnectedAdmin')
+
+@section('content')
+    <div class="container-fluid hero-image">
+        <div class="row">
+            <h1 class="text-center">Modify the word collection to your liking!</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-offset-2 col-sm-8 col-lg-offset-4 col-lg-4 gameBox">
+                <form class="form-horizontal" method="POST" action="/words/store">
+                    <fieldset>
+                            
+                        <!-- Form Name -->
+                        <legend class="text-center">Add a Word!</legend>
+                        <br>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="word">Word:</label>  
+                            <div class="col-md-4">
+                                <input id="word" name="word" type="text" placeholder="Cow" class="form-control input-md" required="">
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="description">Description:</label>  
+                            <div class="col-md-4">
+                                <input id="description" name="description" type="text" placeholder="It goes 'Moo Moo' and produces milk." class="form-control input-md" required="">
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-md btn-success center" id="submitLogin"><span class="glyphicon glyphicon-plus"></span> Create</button>    
+                        
+                    </fieldset>
+                </form>
+            </div>
+        </div> 
+        <br>
+        <br>
+        <br>
+
+        <!--ajouter section avec un form pr rajouter un mot (le bouton "+" sera un post qui redirigera vers la mm page)-->
+
+        @each(word in words.reverse())
+            <div class="row">
+                <div class="col-sm-offset-2 col-sm-8 col-lg-offset-4 col-lg-4 gameBox">
+                    <h2 class="text-center infoWord"><strong>{{word.word}}</strong></h2>
+                    <ul class="listGame">
+                        <li><span class="glyphicon glyphicon-book"></span><strong>  Description: </strong>{{word.description}}</li>
+                        <li><span class="glyphicon glyphicon-user"></span><strong>  Added by: </strong>{{word.author}}</li>
+                        <li><span class="glyphicon glyphicon-time"></span><strong>  Created on: </strong>{{(word.createdAt).toDateString()+" at "+(word.createdAt).toTimeString().substring(0,8)}}</li>
+                    </ul>
+                    <div class="text-center"><a href="#" class="btn btn-md btn-danger infoWordBtn" id="deleteWordBtn"><span class="glyphicon glyphicon-remove"></span> Delete</a></div>
+                    <br>
+                    <!--réussir à faire un appel à la database pr delete un mot...-->
+                </div>
+            </div>
+            <br>
+        @endeach
+    </div>
+@endsection

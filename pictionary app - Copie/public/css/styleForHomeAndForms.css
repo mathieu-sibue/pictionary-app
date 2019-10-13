@@ -1,0 +1,198 @@
+@font-face {
+    font-family: 'Milkshake';
+    src: url('../fonts/Milkshake/Milkshake.otf')
+}
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../fonts/Quicksand/Quicksand-Regular.otf')
+}
+
+body {
+    width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+.description {
+    font-family: 'Quicksand';
+    font-size: 1.4em;
+}
+
+#mainLogo {
+    width: 3.8%;
+    height: 3.8%;
+    margin-left: 0%;
+}
+.navbar {
+    background-color: rgb(241, 64, 64);
+
+}
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0;    
+}
+.navbar-default {
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 0%;
+}
+.navbar-brand {
+    padding-left: 0%;
+    padding-right: 1%;
+    margin-bottom: 0%;
+}
+#homeLink {
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+}
+
+#loginButton {
+    margin-left: 1%;
+    font-family: 'Quicksand';
+}
+#title {
+    color: white;
+    font-family: 'Milkshake';
+    font-size: 1.7em;
+}
+#theGameBtn {
+    color: white;
+    font-family: 'Quicksand';
+}
+#regBtn {
+    color: white;
+    font-family: 'Quicksand';
+}
+footer {
+    border-top: 2px rgba(82, 74, 74, 0.3) solid;
+    margin-top: 50px;
+    padding-top: 40px;
+    font-family: 'Quicksand';
+}
+footer a, footer a:hover {
+    color: black
+}
+
+
+
+
+/*pour page login et register*/
+h1 {
+    font-family: 'Milkshake';
+    font-size: 4em;
+    margin: 2%;
+    color: black
+}
+#loginForm {
+    border: 1.5px solid rgba(241, 64, 64, 0.4);
+    border-radius: 8px;
+    box-shadow: 10px 5px 15px rgba(82, 74, 74, 0.3);
+    background-color: white;
+}
+form {
+    padding: 4%;
+    font-family: 'Quicksand';
+}
+legend {
+    font-size: 3em;
+    font-family: 'Milkshake';
+}
+fieldset {
+    text-align: center;
+}
+#submitLogin {
+    display: inline-block;
+}
+#submitNewAccount {
+    display: inline-block;
+}
+.checkbox {
+    text-align: center;
+}
+
+
+
+/*pour UI simple et admin*/
+#joinCreateBtn {
+    color: white;
+    font-family: 'Milkshake';
+    font-size: 1.2em;
+}
+#usernameButton {
+    margin-left: 1%;
+    font-family: 'Quicksand';
+}
+#createGameBtn {
+    display: inline-block;
+}
+#joinGameBtn {
+    display: inline-block;
+}
+.gameBox {
+    border: 1.5px solid rgba(241, 64, 64, 0.4);
+    border-radius: 8px;
+    box-shadow: 10px 5px 15px rgba(82, 74, 74, 0.3);
+    background-color: white;
+}
+.listGame {
+    list-style-type: none;
+    font-family: 'Quicksand'
+}
+.infoGame {
+    font-family: 'Quicksand'
+}
+.infoWord,.infoWordBtn {
+    font-family: 'Quicksand'
+}
+#deleteWordBtn {
+    display: inline-block
+}
+.infoText {
+    font-family: 'Quicksand';
+    margin-top: 2%;
+    margin-bottom: 2%
+}
+h5 {
+    font-family: 'Quicksand'
+}
+.modif {
+    display: inline-block;
+    font-family: 'Milkshake';
+    font-size: 240%;
+    white-space: normal;
+}
+
+
+/*Pour la hero image et le hero text sur toutes les pages*/
+body, html {
+    height: 100%;
+}
+
+/*La hero image*/
+.hero-image {
+    margin-left: 0px;
+    margin-right: 0px;
+    /*linear-gradient*/
+    background-image: linear-gradient(rgba(61, 21, 21, 0.25),rgba(255, 255, 255, 1)), url('../images/dessin.jpg');
+
+    /*hauteur spécifique*/
+    height: 75%;
+
+    /*Pour positionner et centrer l'image sur tt type de devices*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*filter: blur(2px);*/ /*blur toute la section y coompris les boxes à l'interieur...*/
+    position: relative;
+    margin-top: 0;
+}
+
+/*pour placer le texte au milieu de l'image*/
+.hero-text {
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+}

@@ -1,0 +1,34 @@
+@layout('layouts.appConnectedSimple')
+
+@section('content')
+
+
+    <div class="container-fluid hero-image">
+        <div class="row">
+            <h1 class="text-center">Games you have created</h1>
+        </div>
+        
+        @if(games === [])
+            <div class="row"><h5 class="text-center">Looks like you haven't created any game yet... It may be time to <a href="/games/new">do so!</a> </h5></div>
+        @else
+            
+            @each(game in games.reverse())
+                
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-8 col-lg-offset-4 col-lg-4 gameBox">
+                        <h2 class="text-center infoGame"><strong>{{game.lobbyName}}</strong></h2>
+                        <ul class="listGame">
+                            <li><span class="glyphicon glyphicon-globe"></span><strong>  Players: </strong>{{game.participants.join(', ')}}</li>
+                            <li><span class="glyphicon glyphicon-font"></span><strong>  Words used: </strong>{{game.wordsUsed.join(', ')}}</li>
+                            <li><span class="glyphicon glyphicon-screenshot"></span><strong>  Round Number: </strong>{{game.roundNb}}</li>
+                            <li><span class="glyphicon glyphicon-time"></span><strong>  Created on: </strong>{{(game.createdAt).toDateString()+" at "+(game.createdAt).toTimeString().substring(0,8)}}</li>
+                        </ul>
+                        <br>    
+                    </div>
+                </div>
+                <br>
+                
+            @endeach
+        @endif
+    </div>
+@endsection

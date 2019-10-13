@@ -1,0 +1,37 @@
+@layout('layouts.appConnectedSimple')
+
+@section('content')
+
+
+    <div class="container-fluid hero-image">
+        <div class="row">
+            <h1 class="text-center">Join ongoing games with places left!</h1>
+        </div>
+        
+        @if(games === [])
+            <div class="row"><h5 class="text-center">Unfortunately no game available... Refresh in a few minutes or <a href="/games/new">create your own Game!</a> </h5></div>
+        @else
+            
+            @each(game in games.reverse())
+                
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-8 col-lg-offset-4 col-lg-4 gameBox">
+                        <h2 class="text-center infoGame"><strong>{{game.lobbyName}}</strong></h2>
+                        <ul class="listGame">
+                            <li><span class="glyphicon glyphicon-globe"></span><strong>  Player Number: </strong>{{(game.participants).length}}/{{game.maxNbParticipants}}</li>
+                            <li><span class="glyphicon glyphicon-screenshot"></span><strong>  Current Round: </strong>{{game.wordsUsed.length}}/{{game.roundNb}}</li>
+                            <li><span class="glyphicon glyphicon-user"></span><strong>  Created by: </strong>{{game.creator}}</li>
+                            <li><span class="glyphicon glyphicon-time"></span><strong>  Created on: </strong>{{(game.createdAt).toDateString()+" at "+(game.createdAt).toTimeString().substring(0,8)}}</li>
+                        </ul>
+                        <div class="text-center"><a href="#" class="btn btn-lg btn-success infoGame" id="joinGameBtn" onclick="console.log('truc'+{{game.participants}})"><span class="glyphicon glyphicon-circle-arrow-right"></span> Join</a></div>
+                        <br>
+                        <!--<script>console.log('truc'+"{{game.participants}}");</script>-->
+                        
+                    </div>
+                </div>
+                <br>
+                
+            @endeach
+        @endif
+    </div>
+@endsection

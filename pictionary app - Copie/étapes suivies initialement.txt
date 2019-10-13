@@ -1,0 +1,13 @@
+0. Créer des folders MVC (models (back), views (front), controller (back)) et public (front)
+
+1. Créer un fichier app.js ds controller qui comportera les importations, tables de routage, middlewares,...
+
+2. Lancer npm ds le terminal (gérant les dépendances en termes de ressources des librairies du projet) (en se plaçant ds le folder du projet) : npm init 
+
+3. Configurer le json créé
+
+4. Installer Express ds le folder du projet (tjr ds le terminal) : npm install express
+
+5. Pour lancer l'appli et la tester, faire (ds le terminal) : node app.js
+
+6. Installer les fichiers ressources de bootstrap à l'aide de bower en se plaçant ds le répertoire public ds le terminal : bower install bootstrap

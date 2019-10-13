@@ -1,0 +1,2 @@
+ces 3 documents js composés de lignes d'objets javascript contiennent les records des données stockées dans la database de mon ordinateur ; cela évite aux utilisateurs téléchargeant les fichiers du site de se retrouver avec une base de données initialement vide
+NEANMOINS, ce dossier n'est PAS essentiel au bon fonctionnement du site web 

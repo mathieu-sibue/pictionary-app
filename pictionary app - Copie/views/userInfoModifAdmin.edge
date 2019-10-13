@@ -1,0 +1,67 @@
+@layout('layouts.appConnectedAdmin')
+
+@section('content')
+<div class="hero-image">
+        <div class="container-fluid">
+            <div class="row">
+                <h1 class="text-center">Modify your Account</h1>
+            </div>
+    
+            <div class="row">
+                <div class="col-sm-offset-2 col-sm-8 col-lg-offset-4 col-lg-4" id="loginForm">
+                        <form class="form-horizontal" method="POST" action="/admin/modify">
+                            <fieldset>
+                                
+                                <!-- Form Name -->
+                                <legend class="text-center">Account parameters</legend>
+                                <br>
+    
+                                <!-- Text input-->
+                                <div class="form-group">
+                                  <label class="col-md-4 control-label" for="email">New email:</label>  
+                                  <div class="col-md-4">
+                                  <input id="email" name="email" type="text" placeholder="newemail@host.com" class="form-control input-md" required="" value="{{userLogged.email}}">
+                                    
+                                  </div>
+                                </div>
+                                
+                                <!-- Username -->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="username">New username:</label>  
+                                    <div class="col-md-4">
+                                        <input id="username" name="username" type="text" placeholder="n3wU53rn4m3" class="form-control input-md" required="" value="{{userLogged.username}}">
+                                            
+                                    </div>
+                                </div>
+
+                                
+                                <!-- Password input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="passwordConfirm">Old password:</label>
+                                    <div class="col-md-4">
+                                    <input id="passwordConfirm" name="passwordConfirm" type="password" placeholder="" class="form-control input-md" required="">
+                                      
+                                    </div>
+                                </div>
+
+                                <!-- Password input-->
+                                <div class="form-group">
+                                  <label class="col-md-4 control-label" for="password">New password:</label>
+                                  <div class="col-md-4">
+                                    <input id="password" name="password" type="password" placeholder="" class="form-control input-md" required="">
+                                    
+                                  </div>
+                                </div>
+                                <br>
+    
+                                <button class="btn btn-lg btn-primary center" id="submitLogin"><span class="glyphicon glyphicon-floppy-saved"></span> Save changes</button>
+                                <br>
+                                <br>
+                             </fieldset>
+                        </form>
+                </div>
+            </div> 
+        </div>
+      </div>
+    @endsection
+@endsection

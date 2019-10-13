@@ -1,0 +1,1 @@
+on trouvera ici tout ce qui est fichiers html (qui pointent vers des scripts js ou des feuilles de style css) ou edge qui sont des "custom templates" que la fonction render traduit en HTML
